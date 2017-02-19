@@ -1,0 +1,5 @@
+{
+    "name": "reducers",
+    "version": "1.0.0",
+    "entry": "rootReducer.js"
+}
