@@ -1,12 +1,28 @@
 import React, {Component} from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+// import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux'
+import PurchaseList from '../../components/PurchaseList';
 
-export default class Test extends Component {
+class Dashboard extends Component {
   render() {
+    const { purchases } = this.props;
+
     return (
       <div>
-        <RaisedButton label="Test" />
+        <PurchaseList purchases={ purchases } />
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  purchases: state.purchases,
+});
+
+const mapDispatchToProps = dispatch => ({
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Dashboard);

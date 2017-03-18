@@ -14,7 +14,12 @@ import './App.css';
 
 class App extends Component {
   render() {
-    const { children, pageMeta, uiActions, ui } = this.props;
+    const {
+      children,
+      pageMeta,
+      uiActions,
+      ui,
+    } = this.props;
 
     return (
       <MuiThemeProvider>
@@ -45,4 +50,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(App);

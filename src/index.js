@@ -8,7 +8,7 @@ import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise';
 import createLogger from 'redux-logger';
-import rootReducer from './reducers/rootReducer';
+import rootReducer from './reducers';
 /* Containers */
 import App from './containers/App';
 import Dashboard from './containers/Dashboard';
@@ -24,17 +24,17 @@ injectTapEventPlugin();
 
 const logger = createLogger();
 const store = createStore(
-    rootReducer,
-    applyMiddleware(thunk, promise, logger)
+  rootReducer,
+  applyMiddleware(thunk, promise, logger)
 );
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Router history={browserHistory}>
-            <Route path={routes.HOME.path} component={App}>
-                <Route path={routes.DASHBOARD.path} component={Dashboard} />
-            </Route>
-        </Router>
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+      <Router history={browserHistory}>
+          <Route path={routes.HOME.path} component={App}>
+              <Route path={routes.DASHBOARD.path} component={Dashboard} />
+          </Route>
+      </Router>
+  </Provider>,
+  document.getElementById('root')
 );
