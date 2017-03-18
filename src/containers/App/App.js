@@ -18,9 +18,9 @@ class App extends Component {
 
     return (
       <MuiThemeProvider>
-        <div style={{display:'flex'}}>
+        <div className="app">
           <Nav navOpen={ ui.navOpen } />
-          <div style={{flex: '1 1 0%', minHeight: '100vh'}}>
+          <div className="content">
             <PageHeader
               toggleNav={ uiActions.toggleNav }
               title={ pageMeta.siteTitle }
