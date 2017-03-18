@@ -1,0 +1,34 @@
+.page-header {
+    color: white;
+    background: black;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+li:first-child {
+    margin-left: 0;
+}
+
+li img {
+    height: 80%;
+    margin-top: 10%;
+}

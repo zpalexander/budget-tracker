@@ -8,7 +8,8 @@ import promise from 'redux-promise';
 import createLogger from 'redux-logger';
 import rootReducer from './reducers/rootReducer';
 import App from './containers/App';
-import Test from './containers/Test/index.js';
+import Dashboard from './containers/Dashboard';
+import './index.css';
 
 const logger = createLogger();
 const store = createStore(
@@ -20,7 +21,7 @@ ReactDOM.render(
     <Provider store={store}>
         <Router history={browserHistory}>
             <Route path="/" component={App}>
-                <Route path="test" component={Test} />
+                <Route path="dashboard" component={Dashboard} />
             </Route>
         </Router>
     </Provider>,

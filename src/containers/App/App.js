@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router';
-import logo from './logo.svg';
+import PageHeader from '../../components/PageHeader';
+import PageContainer from '../../components/PageContainer';
+import { connect } from 'react-redux'
 import './App.css';
 
 class App extends Component {
   render() {
+    const {pageMeta} = this.props;
+
     return (
       <div>
-        <ul>
-          <li><h4>Budget Tracker</h4></li>
-          <li><img src={logo} className="App-logo" alt="logo" /></li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/test">Test</Link></li>
-        </ul>
-        {this.props.children}
+        <PageHeader title={pageMeta.siteTitle} />
+        <PageContainer>
+          {this.props.children}
+        </PageContainer>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  pageMeta: state.meta
+});
+
+export default connect(
+  mapStateToProps
+)(App)
