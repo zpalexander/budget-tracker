@@ -1,26 +1,21 @@
-import React, {Component, PropTypes} from 'react';
-import {Link} from 'react-router';
-import { HOME, DASHBOARD } from '../../constants/routes';
-import logo from './logo.svg';
+import React, { PropTypes } from 'react';
+// import logo from './logo.svg';
+import AppBar from 'material-ui/AppBar';
 import './PageHeader.css';
 
-class PageHeader extends Component {
-  render() {
-    return (
-      <div className="page-header">
-        <ul>
-          <li><img src={logo} className="App-logo" alt="logo" /></li>
-          <li>Budget Tracker</li>
-          <li><Link to={HOME}>Home</Link></li>
-          <li><Link to={DASHBOARD}>Dashboard</Link></li>
-        </ul>
-      </div>
-    );
-  };
+const PageHeader = props => {
+  const { title, toggleNav } = props;
+  return (
+    <AppBar
+      onLeftIconButtonTouchTap={ toggleNav }
+      title={ title }
+    />
+  );
 }
 
 PageHeader.propTypes = {
   title: PropTypes.string.isRequired,
+  toggleNav: PropTypes.func.isRequired,
 };
 
 export default PageHeader;

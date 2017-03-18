@@ -12,6 +12,8 @@ import rootReducer from './reducers/rootReducer';
 /* Containers */
 import App from './containers/App';
 import Dashboard from './containers/Dashboard';
+/* Config */
+import * as routes from './constants/routes';
 /* Styles */
 import './index.css';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -29,8 +31,8 @@ const store = createStore(
 ReactDOM.render(
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={App}>
-                <Route path="dashboard" component={Dashboard} />
+            <Route path={routes.HOME.path} component={App}>
+                <Route path={routes.DASHBOARD.path} component={Dashboard} />
             </Route>
         </Router>
     </Provider>,

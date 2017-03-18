@@ -1,10 +1,8 @@
 import {combineReducers} from 'redux';
-import user from './user';
 import meta from './meta';
+import ui from './ui';
 
-const rootReducer = combineReducers({
-  users: user,
-  meta: meta,
+export default combineReducers({
+  meta,
+  ui,
 });
-
-export default rootReducer;
