@@ -6,7 +6,7 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import PurchaseList from '../../components/PurchaseList';
 import NewPurchaseDialog from '../../components/NewPurchaseDialog';
-import { addNewPurchase, saveNewPurchase } from '../../actions/purchases';
+import { addNewPurchase, saveNewPurchase, deletePurchase } from '../../actions/purchases';
 import { toggleAddNewPurchaseDialog } from '../../actions/ui';
 import './Dashboard.css';
 
@@ -22,7 +22,10 @@ class Dashboard extends Component {
     return (
       <div>
         <Card>
-          <PurchaseList purchases={ purchases } />
+          <PurchaseList
+            deletePurchase={ purchaseActions.deletePurchase }
+            purchases={ purchases }
+          />
         </Card>
         <div className="add-purchase-wrapper">
           <FloatingActionButton onTouchTap={ uiActions.toggleAddNewPurchaseDialog }>
@@ -45,8 +48,14 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  purchaseActions: bindActionCreators({ addNewPurchase, saveNewPurchase }, dispatch),
-  uiActions: bindActionCreators({ toggleAddNewPurchaseDialog }, dispatch),
+  purchaseActions: bindActionCreators({
+    addNewPurchase,
+    saveNewPurchase,
+    deletePurchase,
+  }, dispatch),
+  uiActions: bindActionCreators({
+    toggleAddNewPurchaseDialog
+  }, dispatch),
 });
 
 export default connect(

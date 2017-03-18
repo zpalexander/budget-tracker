@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import meta from './meta';
-import purchases from './purchases';
-import ui from './ui';
+import meta from './meta.reducer';
+import purchases from './purchases.reducer';
+import ui from './ui.reducer';
 
 const rootReducer = combineReducers({
   meta,

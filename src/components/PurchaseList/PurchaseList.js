@@ -9,15 +9,20 @@ const buildTableRow = purchase => (
   <ListItem
     primaryText={ purchase.name }
     secondaryText={ `$${purchase.amount}` }
-    rightIconButton={ <IconButton><Delete color={ red500 } /></IconButton> }
+    rightIconButton={ <IconButton onTouchTap={ purchase.delete }><Delete color={ red500 } /></IconButton> }
   />
 );
 
 const PurchaseList = props => {
-  const { purchases } = props;
+  const { deletePurchase , purchases } = props;
+  const purchasesWithDelete = purchases.map(purchase => ({
+    ...purchase,
+    delete: deletePurchase.bind(null, purchase.id)
+  }));
+
   return (
     <List>
-      { purchases.map(buildTableRow) }
+      { purchasesWithDelete.map(buildTableRow) }
     </List>
   );
 }
@@ -27,6 +32,7 @@ PurchaseList.defaultProps = {
 };
 
 PurchaseList.propTypes = {
+  deletePurchase: PropTypes.func.isRequired,
   purchases: PropTypes.array,
 };
 
