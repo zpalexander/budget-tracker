@@ -24,7 +24,10 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="app">
-          <Nav navOpen={ ui.navOpen } />
+          <Nav
+            navOpen={ ui.navOpen }
+            toggleNav={ uiActions.toggleNav }
+          />
           <div className="content">
             <PageHeader
               toggleNav={ uiActions.toggleNav }

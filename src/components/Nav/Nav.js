@@ -14,13 +14,14 @@ const buildNavItem = (route, key) => (
 );
 
 const Nav = (props) => {
-  const { navOpen } = props;
+  const { navOpen, toggleNav } = props;
   const classNames = ['nav'];
   navOpen ? classNames.push('open') : classNames.push('closed');
 
   return (
     <Paper
       className={ classNames.join(' ') }
+      onClick={ toggleNav }
     >
       { navList.map(buildNavItem) }
     </Paper>
@@ -29,6 +30,7 @@ const Nav = (props) => {
 
 Nav.propTypes = {
   navOpen: PropTypes.bool,
+  toggleNav: PropTypes.func.isRequired,
 };
 
 export default Nav;
