@@ -1,0 +1,4 @@
+{
+  "name": "Actions - Purchases",
+  "main": "./purchases.actions.js"
+}
