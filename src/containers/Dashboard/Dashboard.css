@@ -1,8 +1,9 @@
-.add-purchase-wrapper {
-  position: fixed;
-  bottom: 15px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 2;
+.dashboard {
+  display: flex;
+}
+
+.content {
+  flex: 1 1 0%;
+  min-height: 100vh;
+  background-color: rgb(237, 236, 236);
 }

@@ -13,6 +13,7 @@ import rootReducer from './reducers';
 import App from './containers/App';
 import Dashboard from './containers/Dashboard';
 import Login from './containers/Login';
+import Today from './containers/Today';
 /* Config */
 import * as routes from './constants/routes';
 /* Styles */
@@ -33,8 +34,10 @@ ReactDOM.render(
   <Provider store={store}>
       <Router history={browserHistory}>
         <Route component={App}>
-          <Route path="/" component={Login} />
-          <Route path={routes.DASHBOARD.path} component={Dashboard} />
+          <Route path="/" component={ Login } />
+          <Route component={ Dashboard }>
+            <Route path="/dashboard" component={ Today } />
+          </Route>
         </Route>
       </Router>
   </Provider>,
