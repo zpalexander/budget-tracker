@@ -46,7 +46,7 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = state => ({
-  dailyBudget: state.meta.dailyBudget,
+  dailyBudget: state.user.dailyBudget,
   purchases: state.purchases,
   newPurchaseDialogOpen: state.ui.newPurchaseDialogOpen,
 });

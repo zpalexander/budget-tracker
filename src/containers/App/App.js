@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     const {
       children,
-      pageMeta,
+      siteTitle,
       uiActions,
       ui,
     } = this.props;
@@ -31,7 +31,7 @@ class App extends Component {
           <div className="content">
             <PageHeader
               toggleNav={ uiActions.toggleNav }
-              title={ pageMeta.siteTitle }
+              title={ siteTitle }
             />
             <PageContainer>{ children }</PageContainer>
           </div>
@@ -42,7 +42,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  pageMeta: state.meta,
+  siteTitle: `${state.user.name}'s Budget`,
   ui: state.ui,
 });
 
