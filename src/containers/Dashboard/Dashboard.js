@@ -5,6 +5,7 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import PurchaseList from '../../components/PurchaseList';
 import NewPurchaseDialog from '../../components/NewPurchaseDialog';
+import DayStats from '../../components/DayStats';
 import { addNewPurchase, saveNewPurchase, deletePurchase } from '../../actions/purchases';
 import { toggleAddNewPurchaseDialog } from '../../actions/ui';
 import './Dashboard.css';
@@ -20,6 +21,10 @@ class Dashboard extends Component {
 
     return (
       <div>
+        <DayStats
+          dailyBudget={ 200 }
+          purchases={ purchases }
+        />
         <PurchaseList
           deletePurchase={ purchaseActions.deletePurchase }
           purchases={ purchases }

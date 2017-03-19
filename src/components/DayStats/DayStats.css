@@ -1,0 +1,22 @@
+.day-stats {
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.day-stats div {
+    padding: 5px 0;
+}
+
+.day-stats span {
+    display: inline-block;
+}
+
+.label {
+    width: 70%;
+    text-align: left;
+}
+
+.value {
+    width: 30%;
+    text-align: right;
+}
