@@ -11,17 +11,22 @@ const NewPurchaseForm = props => {
   return (
     <form onSubmit={ handleSubmit }>
       <div>
-        <Field
-          name="name"
-          component={ TextField }
-          placeholder="Name"
-        />
-        <Field
-          name="amount"
-          component={ TextField }
-          placeholder="Amount"
-          type="number"
-        />
+        <div>
+          <Field
+            name="name"
+            component={ TextField }
+            placeholder="Name"
+          />
+        </div>
+        <div>
+          <Field
+            name="amount"
+            component={ TextField }
+            placeholder="Amount"
+            type="number"
+            step=".01"
+          />
+        </div>
       </div>
       <div className="button-group">
         <RaisedButton

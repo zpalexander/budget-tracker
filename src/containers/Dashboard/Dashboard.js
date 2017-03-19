@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
-import Card from 'material-ui/Card';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import PurchaseList from '../../components/PurchaseList';
@@ -21,12 +20,10 @@ class Dashboard extends Component {
 
     return (
       <div>
-        <Card>
-          <PurchaseList
-            deletePurchase={ purchaseActions.deletePurchase }
-            purchases={ purchases }
-          />
-        </Card>
+        <PurchaseList
+          deletePurchase={ purchaseActions.deletePurchase }
+          purchases={ purchases }
+        />
         <div className="add-purchase-wrapper">
           <FloatingActionButton onTouchTap={ uiActions.toggleAddNewPurchaseDialog }>
             <ContentAdd />

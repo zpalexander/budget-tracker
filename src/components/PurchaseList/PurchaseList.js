@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { List } from 'material-ui/List';
+import Card from 'material-ui/Card';
 import Purchase from './components/Purchase';
 import './PurchaseList.css';
 
@@ -19,10 +20,16 @@ const PurchaseList = props => {
     delete: deletePurchase.bind(null, purchase.id),
   }));
 
+  if (!purchases.length) {
+    return null;
+  }
+
   return (
-    <List>
-      { purchasesWithDelete.map(buildPurchase) }
-    </List>
+    <Card>
+      <List>
+        { purchasesWithDelete.map(buildPurchase) }
+      </List>
+    </Card>
   );
 }
 
