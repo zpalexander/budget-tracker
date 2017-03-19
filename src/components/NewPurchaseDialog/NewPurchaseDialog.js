@@ -1,30 +1,22 @@
 import React, { PropTypes } from 'react';
 import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import NewPurchaseForm from './components/NewPurchaseForm';
 
 const NewPurchaseDialog = props => {
-  const { saveNewPurchase, open, toggleVisibility } = props;
+  const { saveNewPurchase, isOpen, toggleVisibility } = props;
 
-  const actions = [
-    <FlatButton
-      label="Cancel"
-      primary
-      onTouchTap={ toggleVisibility }
-    />,
-    <RaisedButton
-      label="Create"
-      primary
-      onTouchTap={ saveNewPurchase }
-    />,
-  ];
+  const handleSubmit = formValues => {
+    const { name, amount } = formValues;
+    saveNewPurchase(name, parseFloat(amount));
+    toggleVisibility();
+  }
 
   return (
-    <Dialog
-      actions={ actions }
-      open={ open }
-    >
-      The form will go here
+    <Dialog open={ isOpen }>
+      <NewPurchaseForm
+        onSubmit={ handleSubmit }
+        toggleVisibility={ toggleVisibility }
+      />
     </Dialog>
   );
 };
@@ -35,7 +27,7 @@ NewPurchaseDialog.defaultProps = {
 
 NewPurchaseDialog.propTypes = {
   saveNewPurchase: PropTypes.func,
-  open: PropTypes.bool,
+  isOpen: PropTypes.bool,
   toggleVisibility: PropTypes.func,
 };
 

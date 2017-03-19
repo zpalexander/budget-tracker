@@ -33,7 +33,7 @@ class Dashboard extends Component {
           </FloatingActionButton>
         </div>
         <NewPurchaseDialog
-          open={ newPurchaseDialogOpen }
+          isOpen={ newPurchaseDialogOpen }
           saveNewPurchase={ purchaseActions.saveNewPurchase }
           toggleVisibility={ uiActions.toggleAddNewPurchaseDialog }
         />
