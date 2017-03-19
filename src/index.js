@@ -1,10 +1,10 @@
 /* React */
 import React from 'react';
 import ReactDOM from "react-dom";
-import {Router, Route, browserHistory/*, Link*/} from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 /* Redux */
-import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise';
 import createLogger from 'redux-logger';
@@ -12,6 +12,7 @@ import rootReducer from './reducers';
 /* Containers */
 import App from './containers/App';
 import Dashboard from './containers/Dashboard';
+import Login from './containers/Login';
 /* Config */
 import * as routes from './constants/routes';
 /* Styles */
@@ -31,9 +32,10 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
       <Router history={browserHistory}>
-          <Route path={routes.HOME.path} component={App}>
-              <Route path={routes.DASHBOARD.path} component={Dashboard} />
-          </Route>
+        <Route component={App}>
+          <Route path="/" component={Login} />
+          <Route path={routes.DASHBOARD.path} component={Dashboard} />
+        </Route>
       </Router>
   </Provider>,
   document.getElementById('root')
