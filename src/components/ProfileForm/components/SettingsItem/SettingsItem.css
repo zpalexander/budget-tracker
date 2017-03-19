@@ -1,0 +1,14 @@
+.settings-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.avatar-wrapper {
+    float: left;
+    margin-right: 15px;
+}
+
+.field-wrapper {
+    float: left;
+}

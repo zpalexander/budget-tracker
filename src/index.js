@@ -14,8 +14,7 @@ import App from './containers/App';
 import Dashboard from './containers/Dashboard';
 import Login from './containers/Login';
 import Today from './containers/Today';
-/* Config */
-import * as routes from './constants/routes';
+import Profile from './containers/Profile';
 /* Styles */
 import './index.css';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -36,7 +35,8 @@ ReactDOM.render(
         <Route component={App}>
           <Route path="/" component={ Login } />
           <Route component={ Dashboard }>
-            <Route path="/dashboard" component={ Today } />
+            <Route path="/today" component={ Today } />
+            <Route path="/profile" component={ Profile } />
           </Route>
         </Route>
       </Router>

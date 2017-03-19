@@ -20,7 +20,6 @@ class Login extends Component {
             <img src={logo} className="app-logo" alt="logo" />
           </div>
           <LoginForm handleSubmit={ handleSubmitLoginForm } />
-          }
         </Card>
       </div>
     );

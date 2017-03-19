@@ -1,5 +1,3 @@
-import {SITE_TITLE} from '../constants/strings';
-
 const initialState = {
   name: 'Zach',
   dailyBudget: 300,
