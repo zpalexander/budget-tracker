@@ -5,8 +5,8 @@ export default function validate(values) {
   if (!name) {
     errors.name = 'Required';
   }
-  if (!amount || isNaN(amount)) {
-    errors.amount = 'Must be a number';
+  if (!amount) {
+    errors.amount = 'Required';
   }
 
   return errors;

@@ -1,35 +1,41 @@
 import React, { PropTypes } from 'react';
 import { Field, reduxForm } from 'redux-form'
-import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import { TextField } from 'redux-form-material-ui';
 import validate from './validate';
+import './NewPurchaseForm.css';
 
 const NewPurchaseForm = props => {
   const { handleSubmit, toggleVisibility } = props;
 
   return (
     <form onSubmit={ handleSubmit }>
-      <Field
-        name="name"
-        component={ TextField }
-        placeholder="Name"
-      />
-      <Field
-        name="amount"
-        component={ TextField }
-        placeholder="Amount"
-      />
-      <FlatButton
-        label="Cancel"
-        primary
-        onTouchTap={ toggleVisibility }
-      />
-      <RaisedButton
-        label="Create"
-        type="submit"
-        primary
-      />
+      <div>
+        <Field
+          name="name"
+          component={ TextField }
+          placeholder="Name"
+        />
+        <Field
+          name="amount"
+          component={ TextField }
+          placeholder="Amount"
+          type="number"
+        />
+      </div>
+      <div className="button-group">
+        <RaisedButton
+          label="Cancel"
+          secondary
+          onTouchTap={ toggleVisibility }
+        />
+        <span className="spacer" />
+        <RaisedButton
+          label="Create"
+          type="submit"
+          primary
+        />
+      </div>
     </form>
   );
 };

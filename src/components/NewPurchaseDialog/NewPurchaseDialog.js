@@ -2,6 +2,11 @@ import React, { PropTypes } from 'react';
 import Dialog from 'material-ui/Dialog';
 import NewPurchaseForm from './components/NewPurchaseForm';
 
+const customContentStyle = {
+  width: '90%',
+  textAlign: 'center',
+};
+
 const NewPurchaseDialog = props => {
   const { saveNewPurchase, isOpen, toggleVisibility } = props;
 
@@ -12,7 +17,11 @@ const NewPurchaseDialog = props => {
   }
 
   return (
-    <Dialog open={ isOpen }>
+    <Dialog
+      contentStyle={ customContentStyle }
+      modal
+      open={ isOpen }
+    >
       <NewPurchaseForm
         onSubmit={ handleSubmit }
         toggleVisibility={ toggleVisibility }
