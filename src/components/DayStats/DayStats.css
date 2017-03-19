@@ -20,3 +20,11 @@
     width: 30%;
     text-align: right;
 }
+
+.value.positive {
+    color: green;
+}
+
+.value.negative {
+    color: red;
+}

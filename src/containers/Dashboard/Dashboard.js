@@ -13,6 +13,7 @@ import './Dashboard.css';
 class Dashboard extends Component {
   render() {
     const {
+      dailyBudget,
       newPurchaseDialogOpen,
       purchases,
       purchaseActions,
@@ -22,7 +23,7 @@ class Dashboard extends Component {
     return (
       <div>
         <DayStats
-          dailyBudget={ 200 }
+          dailyBudget={ dailyBudget }
           purchases={ purchases }
         />
         <PurchaseList
@@ -45,6 +46,7 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = state => ({
+  dailyBudget: state.meta.dailyBudget,
   purchases: state.purchases,
   newPurchaseDialogOpen: state.ui.newPurchaseDialogOpen,
 });

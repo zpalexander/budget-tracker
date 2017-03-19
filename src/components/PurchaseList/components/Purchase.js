@@ -10,7 +10,7 @@ const Purchase = props => {
   return (
     <ListItem
       primaryText={ name }
-      secondaryText={ `$${amount}` }
+      secondaryText={ `$${amount.toFixed(2)}` }
       rightIconButton={ <IconButton onTouchTap={ deletePurchase }>
         <Delete color={ red500 } />
         </IconButton>

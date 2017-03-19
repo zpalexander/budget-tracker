@@ -6,20 +6,22 @@ import './DayStats.css';
 const DayStats = (props) => {
   const { dailyBudget, purchases } = props;
   const amountSpent = calculateAmountSpent(purchases);
+  const amountLeft = dailyBudget - amountSpent;
+  const amountLeftClass = (amountLeft > 0) ? 'positive' : 'negative';
 
   return (
     <Card className="day-stats">
       <div>
         <span className="label">Daily Budget:</span>
-        <span className="value">{ `$${dailyBudget}`}</span>
+        <span className="value">{ `$${dailyBudget.toFixed(2)}`}</span>
       </div>
       <div>
         <span className="label">Amount Spent:</span>
-        <span className="value">{ `$${amountSpent}` }</span>
+        <span className="value">{ `$${amountSpent.toFixed(2)}` }</span>
       </div>
       <div>
         <span className="label">Amount Left:</span>
-        <span className="value">{ `$${(dailyBudget - amountSpent)}` }</span>
+        <span className={['value', amountLeftClass].join(' ')}>{ `$${amountLeft.toFixed(2)}` }</span>
       </div>
     </Card>
   );
