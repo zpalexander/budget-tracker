@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 import { Field, reduxForm } from 'redux-form'
 import RaisedButton from 'material-ui/RaisedButton';
 import { TextField } from 'redux-form-material-ui';
@@ -28,11 +29,12 @@ const LoginForm = props => {
         </div>
       </div>
       <div className="button-group">
+        <Link to="/today">
         <RaisedButton
           label="Log In"
-          type="submit"
           primary
         />
+        </Link>
       </div>
     </form>
   );

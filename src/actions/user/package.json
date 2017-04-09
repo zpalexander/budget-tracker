@@ -1,0 +1,4 @@
+{
+  "name": "Actions - User",
+  "main": "./user.action.js"
+}
