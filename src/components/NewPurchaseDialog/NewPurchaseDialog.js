@@ -12,7 +12,7 @@ const NewPurchaseDialog = props => {
 
   const handleSubmit = formValues => {
     const { name, amount } = formValues;
-    saveNewPurchase(name, parseFloat(amount).toFixed(2));
+    saveNewPurchase(name, parseFloat(amount));
     toggleVisibility();
   }
 
