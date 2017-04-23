@@ -15,6 +15,8 @@ import Dashboard from './containers/Dashboard';
 import Login from './containers/Login';
 import Today from './containers/Today';
 import Profile from './containers/Profile';
+/* Routes */
+import * as viewRoutes from '../constants/routes/view';
 /* Styles */
 import './index.css';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -24,6 +26,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 const logger = createLogger();
+
 const store = createStore(
   rootReducer,
   applyMiddleware(thunk, promise, logger)
@@ -35,11 +38,12 @@ ReactDOM.render(
         <Route component={App}>
           <Route path="/" component={ Login } />
           <Route component={ Dashboard }>
-            <Route path="/today" component={ Today } />
-            <Route path="/profile" component={ Profile } />
+            <Route path={ viewRoutes.TODAY.path } component={ Today } />
+            <Route path={ viewRoutes.PROFILE.path } component={ Profile } />
           </Route>
         </Route>
       </Router>
   </Provider>,
   document.getElementById('root')
 );
+

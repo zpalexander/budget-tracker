@@ -1,18 +1,27 @@
+// Contrib
 const express = require('express');
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
 const path = require('path');
+// Routes
+const { PURCHASES } = require('../constants/routes/api');
+const purchasesRouter = require('./api/purchases');
 
 const app = express();
 
 // Setup logger
 app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
 
-// Serve static assets
-app.use(express.static(path.resolve(__dirname, '..', 'build')));
+// Setup body parser
+app.use(bodyParser.json({ type: 'application/*+json' }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-// Always return the main index.html, so react-router render the route in the client
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
-});
+app.get(PURCHASES, purchasesRouter);
+
+// Serve static assets
+const buildPath = path.resolve(__dirname, '..', 'build');
+const htmlFilePath = path.resolve(__dirname, '..', 'build', 'index.html');
+app.use(express.static(buildPath));
+app.get('*', (req, res) => express.static(htmlFilePath));
 
 module.exports = app;

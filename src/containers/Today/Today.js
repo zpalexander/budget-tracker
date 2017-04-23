@@ -6,11 +6,15 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import PurchaseList from '../../components/PurchaseList';
 import NewPurchaseDialog from '../../components/NewPurchaseDialog';
 import DayStats from '../../components/DayStats';
-import { addNewPurchase, saveNewPurchase, deletePurchase } from '../../actions/purchases';
+import * as purchaseActionFunctions from '../../actions/purchases';
 import { toggleAddNewPurchaseDialog } from '../../actions/ui';
 import './Today.css';
 
 class Today extends Component {
+  componentDidMount() {
+    this.props.purchaseActions.getPurchases();
+  }
+
   render() {
     const {
       dailyBudget,
@@ -52,14 +56,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  purchaseActions: bindActionCreators({
-    addNewPurchase,
-    saveNewPurchase,
-    deletePurchase,
-  }, dispatch),
-  uiActions: bindActionCreators({
-    toggleAddNewPurchaseDialog
-  }, dispatch),
+  purchaseActions: bindActionCreators(purchaseActionFunctions, dispatch),
+  uiActions: bindActionCreators({ toggleAddNewPurchaseDialog }, dispatch),
 });
 
 export default connect(

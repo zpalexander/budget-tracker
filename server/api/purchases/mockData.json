@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "name": "Groceries",
+        "amount": 20.25
+    },
+    {
+        "id": 1,
+        "name": "Beer",
+        "amount": 10.25
+    },
+    {
+        "id": 2,
+        "name": "Lyft ride",
+        "amount": 9.19
+    },
+    {
+        "id": 3,
+        "name": "Dinner with friends",
+        "amount": 25.17
+    }
+]
