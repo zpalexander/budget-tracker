@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
+import { updateProfile } from '../../actions/user';
 import Card from 'material-ui/Card';
 import ProfileForm from '../../components/ProfileForm';
 import './Profile.css';
 
 class Profile extends Component {
   render() {
+    const { profileActions } = this.props;
 
     const handleSubmitProfileUpdate = values => {
       console.log('values: ', values);
+      profileActions.updateProfile(values);
     };
 
     return (
@@ -24,8 +27,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  actionsctions: bindActionCreators({
-  }, dispatch),
+  profileActions: bindActionCreators({ updateProfile }, dispatch),
 });
 
 export default connect(
