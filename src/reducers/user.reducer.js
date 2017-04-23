@@ -1,8 +1,9 @@
-import { SET_DAILY_BUDGET } from '../actions/user';
+import { SET_PROFILE, SET_DAILY_BUDGET } from '../actions/user';
 
 const initialState = {
-  name: 'Zach',
-  dailyBudget: 300,
+  name: '',
+  dailyBudget: 0,
+  categories: [],
 };
 
 export default function user(state = initialState, action) {
@@ -11,6 +12,14 @@ export default function user(state = initialState, action) {
         return {
             ...state,
             dailyBudget: action.value,
+        };
+      case SET_PROFILE:
+        const { name, dailyBudget, categories } = action.profile;
+        return {
+          ...state,
+          name,
+          dailyBudget,
+          categories,
         };
     default:
       return state;

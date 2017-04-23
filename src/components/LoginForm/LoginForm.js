@@ -29,12 +29,11 @@ const LoginForm = props => {
         </div>
       </div>
       <div className="button-group">
-        <Link to="/today">
         <RaisedButton
+          type="submit"
           label="Log In"
           primary
         />
-        </Link>
       </div>
     </form>
   );

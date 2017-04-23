@@ -1,0 +1,98 @@
+{
+    "name": "Zach",
+    "dailyBudget": 300,
+    "categories": {
+        "income": [
+            {
+                "name": "salary",
+                "placeholder": "Salary",
+                "iconName": "money"
+            },
+            {
+              "name": "additionalIncome",
+              "placeholder": "Additional Income",
+              "iconName": "money"
+            }
+        ],
+        "home": [
+            {
+                "name": "rent",
+                "placeholder": "Rent / Mortgage",
+                "iconName": "home"
+            },
+            {
+                "name": "homeInsurance",
+                "placeholder": "Insurance",
+                "iconName": "lock"
+            }
+        ],
+        "utilities": [
+            {
+                "name": "electricity",
+                "placeholder": "Electricity",
+                "iconName": "electricity"
+            },
+            {
+                "name": "water",
+                "placeholder": "Water",
+                "iconName": "water"
+            },
+            {
+                "name": "heat",
+                "placeholder": "Heat",
+                "iconName": "heat"
+            },
+            {
+                "name": "phone",
+                "placeholder": "Phone",
+                "iconName": "phone"
+            },
+            {
+                "name": "internet",
+                "placeholder": "Internet",
+                "iconName": "internet"
+            }
+        ],
+        "subscriptions": [
+            {
+                "name": "gym",
+                "placeholder": "Gym",
+                "iconName": "gym"
+            },
+            {
+                "name": "netflix",
+                "placeholder": "Netflix",
+                "iconName": "shoppingcart"
+            },
+            {
+                "name": "amazonPrime",
+                "placeholder": "Amazon Prime",
+                "iconName": "shoppingcart"
+            }
+        ],
+        "auto": [
+            {
+                "name": "carInsurance",
+                "placeholder": "Insurance",
+                "iconName": "lock"
+            },
+            {
+                "name": "gasoline",
+                "placeholder": "Gas",
+                "iconName": "gas"
+            }
+        ],
+        "debt": [
+            {
+                "name": "ccInterest",
+                "placeholder": "Credit Card Interest",
+                "iconName": "creditcard"
+            },
+            {
+                "name": "tuition",
+                "placeholder": "Tuition",
+                "iconName": "school"
+            }
+        ]
+    }
+}
