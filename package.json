@@ -67,12 +67,13 @@
     "redux-logger": "^2.8.1",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
-    "styled-components": "^1.4.3"
+    "styled-components": "^1.4.3",
+    "sw-precache": "^5.1.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
     "start:server": "node server",
-    "build": "node scripts/build.js && react-snapshot",
+    "build": "node scripts/build.js && sw-precache --config=./config/sw-precache-config.js && react-snapshot",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
