@@ -21,9 +21,7 @@ const PurchaseList = props => {
     delete: deletePurchase.bind(null, purchase.id),
   }));
 
-  if (!purchases.length) {
-    return null;
-  }
+  if (!purchases.length) return null;
 
   return (
     <Card>

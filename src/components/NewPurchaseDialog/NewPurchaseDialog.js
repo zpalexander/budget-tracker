@@ -8,10 +8,10 @@ const customContentStyle = {
   textAlign: 'center',
 };
 
-const NewPurchaseDialog = props => {
+const NewPurchaseDialog = (props) => {
   const { saveNewPurchase, isOpen, toggleVisibility } = props;
 
-  const handleSubmit = formValues => {
+  const handleSubmit = (formValues) => {
     const { name, amount } = formValues;
     saveNewPurchase(name, parseFloat(amount));
     toggleVisibility();

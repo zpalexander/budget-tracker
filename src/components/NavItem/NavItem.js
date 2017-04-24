@@ -5,11 +5,7 @@ import MenuItem from 'material-ui/MenuItem';
 import './NavItem.css';
 
 const NavItem = (props) => {
-  const {
-    icon,
-    path,
-    text,
-  } = props;
+  const { path, icon, text } = props;
 
   return (
     <Link to={ path }>

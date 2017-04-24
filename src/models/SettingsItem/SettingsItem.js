@@ -16,19 +16,19 @@ import {
 } from 'material-ui/svg-icons';
 
 const iconNameComponentMap = {
-    creditcard: (<ActionCreditCard />),
-    home: (<ActionHome />),
-    lock: (<ActionLockOutline />),
-    electricity: (<ActionPowerSettingsNew />),
+    creditcard:   (<ActionCreditCard />),
+    home:         (<ActionHome />),
+    lock:         (<ActionLockOutline />),
+    electricity:  (<ActionPowerSettingsNew />),
     shoppingcart: (<ActionShoppingCart />),
-    water: (<ActionOpacity />),
-    phone: (<CommunicationPhone />),
-    money: (<EditorAttachMoney />),
-    gas: (<MapsLocalGasStation />),
-    internet: (<NotificationWifi />),
-    gym: (<PlacesFitnessCenter />),
-    school: (<SocialSchool />),
-    heat: (<SocialWhatshot />),
+    water:        (<ActionOpacity />),
+    phone:        (<CommunicationPhone />),
+    money:        (<EditorAttachMoney />),
+    gas:          (<MapsLocalGasStation />),
+    internet:     (<NotificationWifi />),
+    gym:          (<PlacesFitnessCenter />),
+    school:       (<SocialSchool />),
+    heat:         (<SocialWhatshot />),
 };
 
 function mapIconNameToComponent(name) {

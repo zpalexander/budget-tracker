@@ -9,10 +9,7 @@ const initialState = {
 export default function user(state = initialState, action) {
   switch (action.type) {
     case SET_DAILY_BUDGET:
-        return {
-            ...state,
-            dailyBudget: action.value,
-        };
+        return { ...state, dailyBudget: action.value };
       case SET_PROFILE:
         const { name, dailyBudget, categories } = action.profile;
         return {

@@ -19,7 +19,6 @@ class Login extends Component {
   }
 
   render() {
-    console.log(this.props.loginActions);
     return (
       <div className="login-content">
         <Card className="login-card">

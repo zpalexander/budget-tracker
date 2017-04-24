@@ -15,7 +15,6 @@ class Profile extends Component {
     const { userActions } = this.props;
 
     const handleSubmitProfileUpdate = values => {
-      console.log('values: ', values);
       userActions.updateProfile(values);
     };
 
