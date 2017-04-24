@@ -7,7 +7,7 @@ import './App.css';
 const App = (props) => {
   return (
     <MuiThemeProvider>
-      { props.children }
+        <div>{ props.children }</div>
     </MuiThemeProvider>
   );
 }

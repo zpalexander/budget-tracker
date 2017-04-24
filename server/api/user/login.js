@@ -5,8 +5,6 @@ function isValidLogin(username, password) {
 }
 
 function login(req, res) {
-    console.log('req: ', req);
-    console.log('req.body: ', req.body);
     const { username, password } = req.body;
     if (!isValidLogin(username, password)) {
         return res.status(400).end();
