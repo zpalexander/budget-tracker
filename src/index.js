@@ -26,25 +26,23 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-const logger = createLogger();
-
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunk, promise, logger)
+  applyMiddleware(thunk, promise, createLogger())
 );
 
 ReactDOM.render(
   <Provider store={store}>
       <Router history={browserHistory}>
         <Route component={App}>
-          <Route path="/" component={ Login } />
-          <Route path='/404' component={ NotFound } />
+          <Route path={ viewRoutes.LOGIN.path } component={ Login } />
+          <Route path={ viewRoutes.NOT_FOUND.path } component={ NotFound } />
           <Route component={ Dashboard }>
             <Route path={ viewRoutes.TODAY.path } component={ Today } />
             <Route path={ viewRoutes.PROFILE.path } component={ Profile } />
           </Route>
         </Route>
-        <Redirect from='*' to='/404' />
+        <Redirect from='*' to={ viewRoutes.NOT_FOUND.path } />
       </Router>
   </Provider>,
   document.getElementById('root')
