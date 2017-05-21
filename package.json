@@ -53,6 +53,7 @@
     "express": "^4.15.2",
     "material-ui": "^0.17.1",
     "morgan": "^1.8.1",
+    "nodemon": "^1.11.0",
     "prop-types": "^15.5.8",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -71,8 +72,8 @@
     "sw-precache": "^5.1.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "start:server": "node server",
+    "client": "node scripts/start.js",
+    "server": "nodemon server",
     "build": "node scripts/build.js && sw-precache --config=./config/sw-precache-config.js && react-snapshot",
     "test": "node scripts/test.js --env=jsdom"
   },
