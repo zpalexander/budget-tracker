@@ -1,7 +1,19 @@
+.settings-section {
+    margin-bottom: 45px;
+}
+
+.settings-section-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .avatar-wrapper {
     float: left;
+    padding-right: 10px;
 }
 
 .field-title {
     float: left;
+    font-size: 21px;
 }
