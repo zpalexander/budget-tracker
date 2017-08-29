@@ -12,21 +12,23 @@ class Profile extends Component {
   }
 
   render() {
-    const { userActions } = this.props;
+    const { budgetCategories, userActions } = this.props;
 
-    const handleSubmitProfileUpdate = values => {
-      userActions.updateProfile(values);
-    };
+    const handleSubmitProfileUpdate = values => userActions.updateProfile(values);
 
     return (
       <Card className="profile-card">
-        <ProfileForm onSubmit={ handleSubmitProfileUpdate } />
+        <ProfileForm
+          budgetCategories={ budgetCategories }
+          onSubmit={ handleSubmitProfileUpdate }
+        />
       </Card>
     );
   }
 }
 
 const mapStateToProps = state => ({
+  budgetCategories: state.user.categories,
 });
 
 const mapDispatchToProps = dispatch => ({

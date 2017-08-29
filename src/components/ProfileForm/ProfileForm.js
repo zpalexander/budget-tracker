@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm } from 'redux-form'
 import RaisedButton from 'material-ui/RaisedButton';
+import SettingsSection from '../../models/SettingsSection';
 // import validate from './validate';
 import buildSettingsSection from './util/buildSettingsSection';
-import formSections from './formSections';
 import './ProfileForm.css';
 
 const ProfileForm = props => {
-  const { handleSubmit } = props;
+  const { budgetCategories, handleSubmit } = props;
+  const settingSections = budgetCategories.map((category) => {
+    const { title, iconName, fields } = category;
+    return SettingsSection(title, iconName, fields);
+  });
 
   return (
     <form onSubmit={ handleSubmit } className="profile-form-wrapper">
       <div className="form-content">
-        { formSections.map(buildSettingsSection) }
+        { settingSections.map(buildSettingsSection) }
       </div>
       <div className="button-group">
         <RaisedButton
@@ -27,6 +31,7 @@ const ProfileForm = props => {
 };
 
 ProfileForm.propTypes = {
+  budgetCategories: PropTypes.array.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };
 
