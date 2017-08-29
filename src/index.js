@@ -9,6 +9,7 @@ import thunk from 'redux-thunk';
 import promise from 'redux-promise';
 import createLogger from 'redux-logger';
 import rootReducer from './reducers';
+import { composeWithDevTools } from 'redux-devtools-extension';
 /* Containers */
 import App from './containers/App';
 import Dashboard from './containers/Dashboard';
@@ -26,10 +27,9 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-const store = createStore(
-  rootReducer,
+const store = createStore(rootReducer, composeWithDevTools(
   applyMiddleware(thunk, promise, createLogger())
-);
+));
 
 ReactDOM.render(
   <Provider store={store}>
