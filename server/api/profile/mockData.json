@@ -10,7 +10,7 @@
                 {
                     "name": "salary",
                     "placeholder": "Salary",
-                    "iconName": "money",
+                    "iconName": "money"
                 },
                 {
                   "name": "additionalIncome",
