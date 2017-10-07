@@ -9,6 +9,7 @@ export default function buildSettingsItem(settingsItem, index) {
                 component={ TextField }
                 name={ settingsItem.name }
                 floatingLabelText={ settingsItem.placeholder }
+                defaultValue={ settingsItem.value || 0 }
             />
         </div>
     );

@@ -23,8 +23,8 @@ export const setDailyBudget = (value) => ({
 
 export const updateProfile = (values) => {
     console.log('values: ', values);
-    fetch('https://google.com')
-        .then(console.log);
+    // fetch('https://google.com')
+    //     .then(console.log);
 };
 
 
