@@ -57,6 +57,7 @@
     "material-ui": "^0.17.1",
     "morgan": "^1.8.1",
     "nodemon": "^1.11.0",
+    "nyc": "^11.2.1",
     "pm2": "^2.4.6",
     "prop-types": "^15.5.8",
     "react": "^15.4.2",
@@ -83,8 +84,9 @@
     "client": "node scripts/start.js",
     "server": "nodemon server",
     "build": "node scripts/build.js && sw-precache --config=./config/sw-precache-config.js && react-snapshot",
-    "test": "cross-env NODE_ENV=test ava -v | tap-nyan",
-    "production": "pm2 start ./server -i max --name=\"budget-tracker\""
+    "test": "cross-env NODE_ENV=test ava -v | tap-nyan && npm run coverage",
+    "production": "pm2 start ./server -i max --name=\"budget-tracker\"",
+    "coverage": "nyc report"
   },
   "babel": {
     "presets": [
