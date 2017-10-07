@@ -9,7 +9,7 @@ export const setProfile = (profile) => ({
 
 export const getProfile = () => {
     return (dispatch) => {
-        fetch(PROFILE)
+        return fetch(PROFILE)
             .then(response => response.json())
             .then(profile => dispatch(setProfile(profile)))
     };

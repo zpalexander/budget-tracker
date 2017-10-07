@@ -1,4 +1,4 @@
 {
   "name": "Actions - User",
-  "main": "./user.action.js"
+  "main": "./user.actions.js"
 }
