@@ -1,15 +1,15 @@
 import React from 'react';
-import TextField from 'material-ui/TextField';
+import { Field } from 'redux-form'
+import { TextField } from 'redux-form-material-ui';
 
 export default function buildSettingsItem(settingsItem, index) {
     return (
         <div key={ index }>
-            <TextField
+            <Field
+                component={ TextField }
                 name={ settingsItem.name }
                 floatingLabelText={ settingsItem.placeholder }
-                defaultValue={ settingsItem.value }
-                style={{ width: '100%' }}
-                type="number"
+                defaultValue={ settingsItem.value || 0 }
             />
         </div>
     );

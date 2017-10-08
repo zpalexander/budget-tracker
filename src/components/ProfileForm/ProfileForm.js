@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { reduxForm } from 'redux-form'
 import RaisedButton from 'material-ui/RaisedButton';
 import SettingsSection from '../../models/SettingsSection';
+// import validate from './validate';
 import buildSettingsSection from './util/buildSettingsSection';
 import './ProfileForm.css';
 
 const ProfileForm = props => {
   const { budgetCategories, handleSubmit } = props;
-
   const settingSections = budgetCategories.map((category) => {
     const { title, iconName, fields } = category;
     return SettingsSection(title, iconName, fields);
@@ -34,4 +35,7 @@ ProfileForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
 };
 
-export default ProfileForm;
+export default reduxForm({
+  form: 'profile',
+  //validate
+})(ProfileForm);
