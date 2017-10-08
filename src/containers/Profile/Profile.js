@@ -20,7 +20,7 @@ class Profile extends Component {
       <Card className="profile-card">
         <ProfileForm
           budgetCategories={ budgetCategories }
-          onSubmit={ handleSubmitProfileUpdate }
+          handleSubmit={ handleSubmitProfileUpdate }
         />
       </Card>
     );
