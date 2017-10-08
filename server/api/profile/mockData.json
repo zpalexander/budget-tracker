@@ -10,12 +10,14 @@
                 {
                     "name": "salary",
                     "placeholder": "Salary",
-                    "iconName": "money"
+                    "iconName": "money",
+                    "value": 132000
                 },
                 {
                   "name": "additionalIncome",
                   "placeholder": "Additional Income",
-                  "iconName": "money"
+                  "iconName": "money",
+                  "value": 0
                 }
             ]
         },
@@ -27,12 +29,14 @@
                 {
                     "name": "rent",
                     "placeholder": "Rent / Mortgage",
-                    "iconName": "home"
+                    "iconName": "home",
+                    "value": 1550
                 },
                 {
                     "name": "homeInsurance",
                     "placeholder": "Insurance",
-                    "iconName": "lock"
+                    "iconName": "lock",
+                    "value": 0
                 }
             ]
         },
@@ -44,27 +48,32 @@
                 {
                     "name": "electricity",
                     "placeholder": "Electricity",
-                    "iconName": "electricity"
+                    "iconName": "electricity",
+                    "value": 34.15
                 },
                 {
                     "name": "water",
                     "placeholder": "Water",
-                    "iconName": "water"
+                    "iconName": "water",
+                    "value": 0
                 },
                 {
                     "name": "heat",
                     "placeholder": "Heat",
-                    "iconName": "heat"
+                    "iconName": "heat",
+                    "value": 0
                 },
                 {
                     "name": "phone",
                     "placeholder": "Phone",
-                    "iconName": "phone"
+                    "iconName": "phone",
+                    "value": 0
                 },
                 {
                     "name": "internet",
                     "placeholder": "Internet",
-                    "iconName": "internet"
+                    "iconName": "internet",
+                    "value": 40.00
                 }
             ]
         },
@@ -76,17 +85,20 @@
                 {
                     "name": "gym",
                     "placeholder": "Gym",
-                    "iconName": "gym"
+                    "iconName": "gym",
+                    "value": 52.35
                 },
                 {
                     "name": "netflix",
                     "placeholder": "Netflix",
-                    "iconName": "shoppingcart"
+                    "iconName": "shoppingcart",
+                    "value": 5
                 },
                 {
                     "name": "amazonPrime",
                     "placeholder": "Amazon Prime",
-                    "iconName": "shoppingcart"
+                    "iconName": "shoppingcart",
+                    "value": 10
                 }
             ]
         },
@@ -98,12 +110,14 @@
                 {
                     "name": "carInsurance",
                     "placeholder": "Insurance",
-                    "iconName": "lock"
+                    "iconName": "lock",
+                    "value": 0
                 },
                 {
                     "name": "gasoline",
                     "placeholder": "Gas",
-                    "iconName": "gas"
+                    "iconName": "gas",
+                    "value": 0
                 }
             ]
         },
@@ -115,12 +129,14 @@
                 {
                     "name": "ccInterest",
                     "placeholder": "Credit Card Interest",
-                    "iconName": "creditcard"
+                    "iconName": "creditcard",
+                    "value": 0
                 },
                 {
                     "name": "tuition",
                     "placeholder": "Tuition",
-                    "iconName": "school"
+                    "iconName": "school",
+                    "value": 0
                 }
             ]
         }
