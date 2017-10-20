@@ -21,11 +21,19 @@ export const setDailyBudget = (value) => ({
     value
 });
 
-export const updateProfile = (values) => {
-    console.log('values: ', values);
+export const UPDATE_PROFILE = 'UPDATE_PROFILE';
+export const updateProfile = (categoryIndex, field, value) => ({
+    type: UPDATE_PROFILE,
+    categoryIndex,
+    field,
+    value,
+});
+
+export const submitProfile = (profile) => {
+    console.log('profile: ', profile);
     // fetch('https://google.com')
     //     .then(console.log);
-};
+}
 
 
 export const loginFail = () => ({
@@ -46,7 +54,7 @@ export const login = (username, password) => {
     };
 
     return (dispatch) => {
-        fetch(LOGIN, options)
+        return fetch(LOGIN, options)
             .then(response => response.json())
             .then(data => {
                 dispatch(setProfile(data.profile));

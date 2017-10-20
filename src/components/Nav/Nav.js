@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { navList } from '../../../constants/routes/view';
-// import Drawer from 'material-ui/Drawer';
 import Paper from 'material-ui/Paper';
 import NavItem from '../NavItem';
 import './Nav.css';
