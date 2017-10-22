@@ -2,99 +2,145 @@
     "profile": {
         "name": "Zach",
         "dailyBudget": 300,
-        "categories": {
-            "income": [
-                {
-                    "name": "salary",
-                    "placeholder": "Salary",
-                    "iconName": "money"
-                },
-                {
-                  "name": "additionalIncome",
-                  "placeholder": "Additional Income",
-                  "iconName": "money"
-                }
-            ],
-            "home": [
-                {
-                    "name": "rent",
-                    "placeholder": "Rent / Mortgage",
-                    "iconName": "home"
-                },
-                {
-                    "name": "homeInsurance",
-                    "placeholder": "Insurance",
-                    "iconName": "lock"
-                }
-            ],
-            "utilities": [
-                {
-                    "name": "electricity",
-                    "placeholder": "Electricity",
-                    "iconName": "electricity"
-                },
-                {
-                    "name": "water",
-                    "placeholder": "Water",
-                    "iconName": "water"
-                },
-                {
-                    "name": "heat",
-                    "placeholder": "Heat",
-                    "iconName": "heat"
-                },
-                {
-                    "name": "phone",
-                    "placeholder": "Phone",
-                    "iconName": "phone"
-                },
-                {
-                    "name": "internet",
-                    "placeholder": "Internet",
-                    "iconName": "internet"
-                }
-            ],
-            "subscriptions": [
-                {
-                    "name": "gym",
-                    "placeholder": "Gym",
-                    "iconName": "gym"
-                },
-                {
-                    "name": "netflix",
-                    "placeholder": "Netflix",
-                    "iconName": "shoppingcart"
-                },
-                {
-                    "name": "amazonPrime",
-                    "placeholder": "Amazon Prime",
-                    "iconName": "shoppingcart"
-                }
-            ],
-            "auto": [
-                {
-                    "name": "carInsurance",
-                    "placeholder": "Insurance",
-                    "iconName": "lock"
-                },
-                {
-                    "name": "gasoline",
-                    "placeholder": "Gas",
-                    "iconName": "gas"
-                }
-            ],
-            "debt": [
-                {
-                    "name": "ccInterest",
-                    "placeholder": "Credit Card Interest",
-                    "iconName": "creditcard"
-                },
-                {
-                    "name": "tuition",
-                    "placeholder": "Tuition",
-                    "iconName": "school"
-                }
-            ]
-        }
+        "categories": [
+            {
+                "type": "income",
+                "title": "Income",
+                "iconName": "money",
+                "fields": [
+                    {
+                        "name": "salary",
+                        "placeholder": "Salary",
+                        "iconName": "money",
+                        "value": 132000
+                    },
+                    {
+                      "name": "additionalIncome",
+                      "placeholder": "Additional Income",
+                      "iconName": "money",
+                      "value": 0
+                    }
+                ]
+            },
+            {
+                "type": "home",
+                "title": "Home",
+                "iconName": "home",
+                "fields": [
+                    {
+                        "name": "rent",
+                        "placeholder": "Rent / Mortgage",
+                        "iconName": "home",
+                        "value": 1550
+                    },
+                    {
+                        "name": "homeInsurance",
+                        "placeholder": "Insurance",
+                        "iconName": "lock",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "type": "utilities",
+                "title": "Utilities",
+                "iconName": "electricity",
+                "fields": [
+                    {
+                        "name": "electricity",
+                        "placeholder": "Electricity",
+                        "iconName": "electricity",
+                        "value": 34.15
+                    },
+                    {
+                        "name": "water",
+                        "placeholder": "Water",
+                        "iconName": "water",
+                        "value": 0
+                    },
+                    {
+                        "name": "heat",
+                        "placeholder": "Heat",
+                        "iconName": "heat",
+                        "value": 0
+                    },
+                    {
+                        "name": "phone",
+                        "placeholder": "Phone",
+                        "iconName": "phone",
+                        "value": 0
+                    },
+                    {
+                        "name": "internet",
+                        "placeholder": "Internet",
+                        "iconName": "internet",
+                        "value": 40.00
+                    }
+                ]
+            },
+            {
+                "type": "subscriptions",
+                "title": "Subscriptions",
+                "iconName": "shoppingcart",
+                "fields": [
+                    {
+                        "name": "gym",
+                        "placeholder": "Gym",
+                        "iconName": "gym",
+                        "value": 52.35
+                    },
+                    {
+                        "name": "netflix",
+                        "placeholder": "Netflix",
+                        "iconName": "shoppingcart",
+                        "value": 5
+                    },
+                    {
+                        "name": "amazonPrime",
+                        "placeholder": "Amazon Prime",
+                        "iconName": "shoppingcart",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "type": "transportation",
+                "title": "Transportation",
+                "iconName": "gas",
+                "fields": [
+                    {
+                        "name": "carInsurance",
+                        "placeholder": "Insurance",
+                        "iconName": "lock",
+                        "value": 0
+                    },
+                    {
+                        "name": "gasoline",
+                        "placeholder": "Gas",
+                        "iconName": "gas",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "type": "debt",
+                "title": "Debt",
+                "iconName": "creditcard",
+                "fields": [
+                    {
+                        "name": "ccInterest",
+                        "placeholder": "Credit Card Interest",
+                        "iconName": "creditcard",
+                        "value": 0
+                    },
+                    {
+                        "name": "tuition",
+                        "placeholder": "Tuition",
+                        "iconName": "school",
+                        "value": 0
+                    }
+                ]
+            }
+        ]
     }
 }
