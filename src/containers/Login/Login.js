@@ -1,9 +1,14 @@
+// Libraries
 import React, { Component } from 'react';
+// State
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
+import { login } from '../../actions/user';
+// Components
 import Card from 'material-ui/Card';
 import LoginForm from '../../components/LoginForm';
-import { login } from '../../actions/user';
+import LoadingOverlay from '../../components/LoadingOverlay';
+// Styles and assets
 import logo from './logo.svg';
 import './Login.css';
 
@@ -19,6 +24,8 @@ class Login extends Component {
   }
 
   render() {
+    const { isLoading } = this.props;
+
     return (
       <div className="login-content">
         <Card className="login-card">
@@ -27,12 +34,15 @@ class Login extends Component {
           </div>
           <LoginForm onSubmit={ this.handleSubmitLoginForm } />
         </Card>
+        <LoadingOverlay show={ isLoading } />
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  isLoading: state.ui.isLoading,
+});
 
 const mapDispatchToProps = dispatch => ({
   loginActions: bindActionCreators({ login }, dispatch),

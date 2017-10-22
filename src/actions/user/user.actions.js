@@ -1,5 +1,6 @@
 import { browserHistory } from 'react-router';
 import { LOGIN, PROFILE } from '../../../constants/routes/api';
+import { toggleIsLoading } from '../ui';
 
 export const SET_PROFILE = 'SET_PROFILE';
 export const setProfile = (profile) => ({
@@ -46,12 +47,14 @@ export const login = (username, password) => {
     };
 
     return (dispatch) => {
-        fetch(LOGIN, options)
+        dispatch(toggleIsLoading());
+        return fetch(LOGIN, options)
             .then(response => response.json())
             .then(data => {
                 dispatch(setProfile(data.profile));
+                dispatch(toggleIsLoading());
                 browserHistory.push('/today');
             })
-            .catch(dispatch(loginFail));
+            .catch(dispatch(loginFail()));
     };
 };
