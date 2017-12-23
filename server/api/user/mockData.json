@@ -4,7 +4,7 @@
         "dailyBudget": 300,
         "categories": [
             {
-                "key": "income",
+                "type": "income",
                 "title": "Income",
                 "iconName": "money",
                 "fields": [
@@ -23,7 +23,7 @@
                 ]
             },
             {
-                "key": "home",
+                "type": "home",
                 "title": "Home",
                 "iconName": "home",
                 "fields": [
@@ -42,7 +42,7 @@
                 ]
             },
             {
-                "key": "utilities",
+                "type": "utilities",
                 "title": "Utilities",
                 "iconName": "electricity",
                 "fields": [
@@ -79,7 +79,8 @@
                 ]
             },
             {
-                "key": "subscriptions",
+
+                "type": "subscriptions",
                 "title": "Subscriptions",
                 "iconName": "shoppingcart",
                 "fields": [
@@ -104,7 +105,7 @@
                 ]
             },
             {
-                "key": "transportation",
+                "type": "transportation",
                 "title": "Transportation",
                 "iconName": "gas",
                 "fields": [
@@ -123,7 +124,8 @@
                 ]
             },
             {
-                "key": "debt",
+
+                "type": "debt",
                 "title": "Debt",
                 "iconName": "creditcard",
                 "fields": [

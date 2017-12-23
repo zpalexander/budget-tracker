@@ -1,0 +1,4 @@
+{
+  "name": "LoadingOverlay",
+  "main": "./LoadingOverlay.js"
+}

@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import PageHeader from '../../components/PageHeader';
 import PageContainer from '../../components/PageContainer';
 import Nav from '../../components/Nav';
+import LoadingOverlay from '../../components/LoadingOverlay';
 /* Actions */
 import { toggleNav } from '../../actions/ui';
 import './Dashboard.css';
@@ -32,6 +33,7 @@ class Dashboard extends Component {
           />
           <PageContainer>{ children }</PageContainer>
         </div>
+        <LoadingOverlay show={ ui.isLoading } />
       </div>
     );
   }
